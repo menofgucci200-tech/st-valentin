@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffe4f7;
+        }
+
+        .oleo-script-regular {
+            font-family: "Oleo Script", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .card {
+            font-family: "Oleo Script", system-ui;
+            font-weight: 800;
+            font-style: normal;
+            background-color: hsl(0, 0%, 100%);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 10px 5px 10px 5px #000000;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .card h1 {
+            font-family: "Oleo Script", system-ui;
+            font-weight: 400;
+            font-style: bold;
+            color: #ec0bdd;
+        }
+
+        .card p {
+            font-family: "Oleo Script", system-ui;
+            font-weight: 400;
+            font-style: italic;
+            color: #000000;
+        }
+
+        .retour {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .retour button {
+            border-radius: 1.5rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            padding: 10px 20px;
+            color: rgb(0, 0, 0);
+            background-color: rgba(37, 7, 106, 0.518);
+        }
+
+        .retour button:hover {
+            background-color: #ff4a8d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>14 Février 2026</h1>
+        <p>Un jour que le monde appelle la fête de l’amour…
+            Mais pour moi, c’est le jour où je choisis de t’aimer sans réserve.
+            Pas seulement dans les moments faciles,
+            Mais dans les tempêtes, les doutes, et les combats de la vie.
+
+            Je te promets de t’aimer quand le soleil brillera…
+            Et encore plus quand la nuit semblera trop longue.
+            Je te promets d’être un abri quand le monde sera dur,
+            Une force quand tu te sentiras fragile,
+            Un sourire quand la vie voudra t’attrister.
+
+            Car à mes yeux, tu n’es pas seulement importante…
+            Tu es une reine.
+
+            Une reine par ton cœur,
+            Une reine par ta douceur,
+            Une reine par la lumière que tu apportes partout où tu passes.
+
+            Si la vie est un royaume,
+            Alors mon plus grand honneur serait d’y marcher à tes côtés.
+            Et si l’amour est une histoire,
+            Alors je veux écrire chaque page avec toi…
+            Aujourd’hui, demain… et aussi longtemps que nos cœurs sauront battre ensemble.
+        </p>
+    </div>
+    <audio autoplay loop>
+        <source src="music/re.mp3" type="audio/mpeg">
+        Ton navigateur ne supporte pas l’audio.
+    </audio>
+    <div class="retour">
+        <a href="page2.html"><button class="retour" type="button">Retour</button></a>
+    </div>
+</body>
+
+</html>

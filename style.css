@@ -1,0 +1,170 @@
+/* Style global de la page */
+body {
+    background-color: #fedcf1;
+    /* couleur de fond */
+    margin: 0;
+    height: 100vh;
+    /* prend toute la hauteur de l’écran */
+    overflow: hidden;
+    /* évite le scroll */
+    position: relative;
+}
+
+/* Card centrée */
+/* Card centrée et responsive */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("images/im5.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    padding: 2rem;
+    /* unités relatives */
+    width: 90%;
+    /* prend 90% de la largeur dispo */
+    max-width: 500px;
+    /* limite sur grand écran */
+    min-width: 250px;
+    /* taille minimale */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    /* reste au-dessus du fond animé */
+    text-align: center;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .card {
+        padding: 1.5rem;
+        /* réduit le padding sur mobile */
+        width: 95%;
+        /* prend presque toute la largeur */
+    }
+
+    .btn-yes,
+    .btn-no {
+        font-size: 1rem;
+        /* boutons plus petits */
+        padding: 0.5rem 1rem;
+    }
+
+    .h1 {
+        font-size: 1.4rem;
+        /* texte plus petit */
+    }
+}
+
+.text {
+    color: #f23763;
+}
+
+/* Conteneur des boutons */
+.buttons {
+    position: relative;
+    /* nécessaire pour que le bouton "Non" se déplace à l'intérieur */
+    width: 100%;
+    height: 100px;
+    /* espace pour que le bouton puisse s’échapper */
+    flex-direction: row;
+}
+
+/* Bouton Oui */
+.btn-yes {
+    padding: 0.6rem 1.2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 44px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    background-color: #f23763;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-yes:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+/* Bouton Non (qui s’échappe) */
+.btn-no {
+    padding: 0.6rem 1.2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 44px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    background-color: #ffffff;
+    color: #000;
+    font-size: 1.2rem;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    /* permet de se déplacer partout */
+    transition: left 0.2s, top 0.2s;
+    /* effet fluide quand il bouge */
+}
+
+/* Fond animé (cœurs et nounours) */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    /* ne bloque pas les clics */
+    z-index: 1;
+}
+
+.background span {
+    position: absolute;
+    font-size: 2rem;
+    animation: bounce linear infinite;
+}
+
+/* Animation des symboles */
+@keyframes bounce {
+    0% {
+        transform: translateY(-90vh) scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(90vh) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .card {
+        padding: 1.5rem;
+        /* réduit le padding sur mobile */
+        width: 95%;
+        /* prend presque toute la largeur */
+    }
+
+    .btn-yes,
+    .btn-no {
+        font-size: 1rem;
+        /* boutons plus petits */
+        padding: 0.5rem 1rem;
+    }
+
+
+}
